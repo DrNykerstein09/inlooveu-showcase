@@ -57,7 +57,7 @@ and interests. Email-confirmed accounts remain a separate implemented product
 capability, described in the engineering notes.
 
 Video, caption and poster filenames use `-v2` to avoid reusing cached media.
-`index.html` versions the stylesheet and both scripts with `v=20261106-2`.
+`index.html` versions the stylesheet and both scripts with `v=20261106-3`.
 All six screenshot URLs in the asset map use the same query version, so updated
 profile, discovery and conversation captures keep their filenames without
 reusing the earlier images from a visitor's cache.

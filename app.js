@@ -22,6 +22,12 @@
     filmTitle: "Una conexión es solo el principio.",
     videoLabel: "Recorrido del producto Inlooveu",
     videoFallback: "Tu navegador no admite video integrado.",
+    chaptersLabel: "Capítulos del video",
+    chapterRegistration: "Registro",
+    chapterProfile: "Perfil",
+    chapterCards: "Tarjetas y swipe",
+    chapterChat: "Chat en vivo",
+    chapterHistory: "Historial",
     filmNote: "Narración en español; subtítulos en español e inglés. Recorrido de formularios antes del envío final, tarjetas con fotos y sus detalles, perfiles preparados y una conversación entre dos cuentas de demostración controladas.",
     productEyebrow: "02 / La experiencia",
     productTitleFirst: "De un perfil",
@@ -157,6 +163,29 @@
     } catch { /* Missing media stays out of the published page, without fake previews. */ }
   }
   prepareVideo();
+  for (const button of document.querySelectorAll("button[data-video-time]")) {
+    button.addEventListener("click", async () => {
+      const video = document.getElementById("demo-video");
+      const start = Number(button.dataset.videoTime);
+      if (!Number.isFinite(start) || start < 0) return;
+      try {
+        if (video.readyState < 1) {
+          await new Promise((resolve, reject) => {
+            const cleanup = () => {
+              video.removeEventListener("loadedmetadata", loaded);
+              video.removeEventListener("error", failed);
+            };
+            const loaded = () => { cleanup(); resolve(); };
+            const failed = () => { cleanup(); reject(new Error("Video metadata unavailable")); };
+            video.addEventListener("loadedmetadata", loaded, { once: true });
+            video.addEventListener("error", failed, { once: true });
+          });
+        }
+        video.currentTime = start;
+        await video.play();
+      } catch { /* Native video controls remain available if playback is blocked. */ }
+    });
+  }
   if (/^https:\/\/github\.com\/[^/]+\/[^/]+\/?$/.test(config.repositoryUrl || "")) {
     for (const link of document.querySelectorAll(".repository-link")) {
       link.href = config.repositoryUrl; link.target = "_blank"; link.rel = "noopener noreferrer"; link.hidden = false;
