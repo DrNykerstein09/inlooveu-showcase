@@ -29,16 +29,16 @@ The published media lives under `assets/`:
 
 | File | Purpose |
 | --- | --- |
-| `inlooveu-demo-v2.mp4` | 120-second walkthrough; H.264 MP4 recommended |
-| `inlooveu-demo-v2.en.vtt` | English WebVTT captions for the Spanish narration |
-| `inlooveu-demo-v2.es.vtt` | Spanish WebVTT captions for that narration |
-| `social-preview-v2.png` | Video poster and social sharing preview |
-| `01-producto.png` | Prepared profile/product screenshot |
-| `02-descubrimiento.png` | Updated capture of the original photo-card discovery interface |
-| `03-conversacion.png` | Prepared conversation between controlled accounts |
+| `inlooveu-demo-v3.mp4` | 120-second walkthrough; H.264 MP4 recommended |
+| `inlooveu-demo-v3.en.vtt` | English WebVTT captions for the Spanish narration |
+| `inlooveu-demo-v3.es.vtt` | Spanish WebVTT captions for that narration |
+| `social-preview-v3.png` | Video poster and social sharing preview |
+| `01-producto-v3.png` | Original public profile fields and photos, viewed in the recording copy |
+| `02-descubrimiento-v3.png` | Updated capture of the original photo-card discovery interface |
+| `03-conversacion-v3.png` | Prepared conversation between controlled accounts |
 | `04-ingenieria.png` | Engineering view / save → emit → recover sequence |
-| `05-registro.png` | Registration form walkthrough before final submission |
-| `06-card-detalle.png` | Expanded card showing biography, academic details and interests |
+| `05-registro-v3.png` | Registration form walkthrough before final submission |
+| `06-card-detalle-v3.png` | Expanded card showing biography, academic details and interests |
 
 The filenames can also be changed in `site.config.js`. Screenshots appear only
 after their files load. The video section and watch button appear only when the
@@ -49,29 +49,31 @@ corresponding captions; native video controls can override the selection.
 Check that captions are present and synchronized before publication.
 
 The expanded walkthrough covers the original registration forms, photo cards,
-gallery controls, expanded card details, a prepared profile and the two-client
+gallery controls, expanded card details, a real profile in the local copy and the two-client
 chat. Registration is shown **before final submission**: it does not demonstrate
 creating an account or sending a verification email. The forms include email,
 password, name, date of birth, faculty, degree, semester, preferences, biography
 and interests. Email-confirmed accounts remain a separate implemented product
 capability, described in the engineering notes.
 
-Video, caption and poster filenames use `-v2` to avoid reusing cached media.
-`index.html` versions the stylesheet and both scripts with `v=20261106-3`.
-All six screenshot URLs in the asset map use the same query version, so updated
-profile, discovery and conversation captures keep their filenames without
-reusing the earlier images from a visitor's cache.
-The existing image probes cover all six screenshot keys in `site.config.js`,
-including `registration` and `cardDetail`; those figures remain hidden until
-their files load. Replace the discovery image with the approved new capture
-when integrating the final recording assets.
+Active media filenames use `-v3` to avoid reusing cached media. The stylesheet
+and scripts use `v=20261106-4`. Earlier media remains available for existing
+links; `site.config.js` selects the current presentation.
 
-Only approved demonstration accounts and prepared messages belong in these
-assets. Demo profile photos are AI-generated, as disclosed in both languages
-in the site footer. Do not include private conversations, third-party profile
-photos, real account email addresses, tokens, credentials, database exports,
-application runtime files or raw private application source. Do not copy the
-historical backup files into this repository.
+This revision uses original photos and public profile fields from four actual
+Inlooveu accounts, at the founder's request. Their 13 Cloudinary photo references
+and selected public fields were checked against the current production records.
+Cards and profile editing were recorded in an isolated copy, using demonstration
+authentication and substitute private fields. Original account credentials,
+contact details, birth dates and conversations were not imported into that copy.
+The Ana/Diego chat uses fictional messages and initial-letter avatars. The Lucía
+registration walkthrough uses sample inputs and stops before final submission.
+All human photographs in the V3 recording are original selected profile photos.
+
+No database exports, tokens, credentials, private fixture/provenance files,
+application runtime or raw private application source belongs in this repository.
+The original S3 resources remain unavailable; accessible Cloudinary photos are
+a separate part of the original data.
 
 ## Language and accessibility
 

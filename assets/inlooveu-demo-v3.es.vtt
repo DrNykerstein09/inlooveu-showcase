@@ -1,0 +1,97 @@
+WEBVTT
+
+00:00:00.099 --> 00:00:04.769
+Inlooveu. Una plataforma social universitaria
+que construí y lancé.
+
+00:00:06.099 --> 00:00:09.715
+Primero, correo y contraseña, con sus
+validaciones.
+
+00:00:11.099 --> 00:00:15.565
+Después vienen los datos personales, la
+carrera y las preferencias de descubrimiento.
+
+00:00:18.099 --> 00:00:21.484
+También aparecen las fotos, la descripción y
+los intereses.
+
+00:00:22.333 --> 00:00:24.723
+Este recorrido termina antes del envío final.
+
+00:00:26.099 --> 00:00:30.710
+El perfil reúne esa presentación: fotos, una
+descripción e intereses.
+
+00:00:31.558 --> 00:00:35.891
+Podemos recorrerlo y editarlo, sin perder de
+vista cómo se presenta una persona.
+
+00:00:38.099 --> 00:00:40.781
+La pantalla principal da protagonismo a las
+fotos.
+
+00:00:41.629 --> 00:00:44.772
+Cada tarjeta permite abrir el perfil y conocer
+a la persona.
+
+00:00:47.099 --> 00:00:50.266
+En el detalle leemos la descripción y los
+intereses del perfil.
+
+00:00:51.114 --> 00:00:54.148
+La presentación de cada persona acompaña a sus
+fotos.
+
+00:00:57.099 --> 00:01:04.706
+La galería permite recorrer varias fotos del
+perfil. Las fotos y los datos de estas
+tarjetas vienen del respaldo real de Inlooveu.
+
+00:01:06.099 --> 00:01:08.793
+El swipe desplaza la tarjeta de forma visible.
+
+00:01:09.641 --> 00:01:11.498
+Registramos un like o un descarte,
+
+00:01:11.765 --> 00:01:14.386
+y detectamos reciprocidad cuando hay interés
+mutuo.
+
+00:01:16.099 --> 00:01:18.380
+Conservamos el chat entre dos ventanas.
+
+00:01:19.228 --> 00:01:22.711
+Enviamos un mensaje desde una cuenta y vemos
+cómo aparece en la otra.
+
+00:01:23.561 --> 00:01:25.672
+La API guarda el mensaje en MongoDB
+
+00:01:25.684 --> 00:01:28.160
+antes de distribuir el registro por Socket IO.
+
+00:01:29.010 --> 00:01:31.583
+El intercambio continúa desde ambos clientes.
+
+00:01:36.091 --> 00:01:39.337
+Al recargar, la API recupera el historial
+desde MongoDB.
+
+00:01:40.124 --> 00:01:43.020
+Los mensajes siguen disponibles cuando
+volvemos a la conversación.
+
+00:01:44.099 --> 00:01:45.907
+React y TypeScript en el cliente.
+
+00:01:46.755 --> 00:01:50.189
+Express, MongoDB y Socket IO conectan la
+persistencia
+
+00:01:50.201 --> 00:01:51.706
+y los eventos en tiempo real.
+
+00:01:54.099 --> 00:01:58.369
+Pierre Burciaga. Explora el producto y las
+decisiones de ingeniería.
