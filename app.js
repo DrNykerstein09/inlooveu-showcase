@@ -139,7 +139,7 @@
         track.default = track.dataset.captionLanguage === language;
         track.addEventListener("load", selectCaptions);
       }
-      if (assets.product) video.poster = assets.product;
+      if (assets.poster) video.poster = assets.poster;
       video.load();
       selectCaptions();
       document.getElementById("walkthrough").hidden = false;

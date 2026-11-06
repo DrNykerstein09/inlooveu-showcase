@@ -1,9 +1,9 @@
-// Public configuration only. Set repositoryUrl after creating the separate
-// public presentation repository. Never point it to the private app source.
+// Public presentation assets and repository. Application source remains private.
 window.INLOOVEU_SHOWCASE = Object.freeze({
   repositoryUrl: "https://github.com/DrNykerstein09/inlooveu-showcase",
   assets: {
     video: "assets/inlooveu-demo.mp4",
+    poster: "assets/social-preview.png",
     captions: {
       en: "assets/inlooveu-demo.en.vtt",
       es: "assets/inlooveu-demo.es.vtt",

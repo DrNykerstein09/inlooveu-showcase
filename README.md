@@ -32,7 +32,8 @@ The published media lives under `assets/`:
 | `inlooveu-demo.mp4` | 75-second walkthrough; H.264 MP4 recommended |
 | `inlooveu-demo.en.vtt` | English WebVTT captions for the Spanish narration |
 | `inlooveu-demo.es.vtt` | Spanish WebVTT captions for that narration |
-| `01-producto.png` | Prepared profile/product screenshot; also the video poster |
+| `social-preview.png` | Video poster and social sharing preview |
+| `01-producto.png` | Prepared profile/product screenshot |
 | `02-descubrimiento.png` | Discovery/like interaction |
 | `03-conversacion.png` | Prepared conversation between controlled accounts |
 | `04-ingenieria.png` | Engineering view / save → emit → recover sequence |
