@@ -29,14 +29,16 @@ The published media lives under `assets/`:
 
 | File | Purpose |
 | --- | --- |
-| `inlooveu-demo.mp4` | 75-second walkthrough; H.264 MP4 recommended |
-| `inlooveu-demo.en.vtt` | English WebVTT captions for the Spanish narration |
-| `inlooveu-demo.es.vtt` | Spanish WebVTT captions for that narration |
-| `social-preview.png` | Video poster and social sharing preview |
+| `inlooveu-demo-v2.mp4` | 120-second walkthrough; H.264 MP4 recommended |
+| `inlooveu-demo-v2.en.vtt` | English WebVTT captions for the Spanish narration |
+| `inlooveu-demo-v2.es.vtt` | Spanish WebVTT captions for that narration |
+| `social-preview-v2.png` | Video poster and social sharing preview |
 | `01-producto.png` | Prepared profile/product screenshot |
-| `02-descubrimiento.png` | Discovery/like interaction |
+| `02-descubrimiento.png` | Updated capture of the original photo-card discovery interface |
 | `03-conversacion.png` | Prepared conversation between controlled accounts |
 | `04-ingenieria.png` | Engineering view / save → emit → recover sequence |
+| `05-registro.png` | Registration form walkthrough before final submission |
+| `06-card-detalle.png` | Expanded card showing biography, academic details and interests |
 
 The filenames can also be changed in `site.config.js`. Screenshots appear only
 after their files load. The video section and watch button appear only when the
@@ -46,11 +48,30 @@ and English/Spanish caption tracks. Changing the site language selects the
 corresponding captions; native video controls can override the selection.
 Check that captions are present and synchronized before publication.
 
+The expanded walkthrough covers the original registration forms, photo cards,
+gallery controls, expanded card details, a prepared profile and the two-client
+chat. Registration is shown **before final submission**: it does not demonstrate
+creating an account or sending a verification email. The forms include email,
+password, name, date of birth, faculty, degree, semester, preferences, biography
+and interests. Email-confirmed accounts remain a separate implemented product
+capability, described in the engineering notes.
+
+Video, caption and poster filenames use `-v2` to avoid reusing cached media.
+`index.html` versions the stylesheet and both scripts with `v=20261106-2`.
+All six screenshot URLs in the asset map use the same query version, so updated
+profile, discovery and conversation captures keep their filenames without
+reusing the earlier images from a visitor's cache.
+The existing image probes cover all six screenshot keys in `site.config.js`,
+including `registration` and `cardDetail`; those figures remain hidden until
+their files load. Replace the discovery image with the approved new capture
+when integrating the final recording assets.
+
 Only approved demonstration accounts and prepared messages belong in these
-assets. Do not include private conversations, third-party profile photos, email
-addresses, tokens, credentials, database exports, application runtime files or
-raw private application source. Do not copy the historical backup files into
-this repository.
+assets. Demo profile photos are AI-generated, as disclosed in both languages
+in the site footer. Do not include private conversations, third-party profile
+photos, real account email addresses, tokens, credentials, database exports,
+application runtime files or raw private application source. Do not copy the
+historical backup files into this repository.
 
 ## Language and accessibility
 
@@ -89,7 +110,7 @@ private paths and credentials are deliberately absent from this public tree.
 
 ## Checks before publishing an update
 
-1. Keep the video, captions and four screenshots consistent with the captured version.
+1. Keep the 120-second video, captions and six screenshots consistent with the captured version.
 2. Set the public presentation repository URL.
 3. Preview from an HTTP server, test the language toggle and keyboard access,
    check both mobile and desktop layouts, and watch the captioned video.

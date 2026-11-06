@@ -18,15 +18,20 @@
     evidenceLink: "Sobre esta cifra ↓",
     heroBaseline: "De una idea a un producto en funcionamiento y desplegado.",
     filmEyebrow: "01 / Un producto en movimiento",
-    filmDuration: "Recorrido de 75 segundos",
+    filmDuration: "Recorrido de 120 segundos",
     filmTitle: "Una conexión es solo el principio.",
     videoLabel: "Recorrido del producto Inlooveu",
     videoFallback: "Tu navegador no admite video integrado.",
-    filmNote: "Narración en español; subtítulos en español e inglés. Cuentas de demostración preparadas. El recorrido muestra el producto, la recepción de mensajes y el historial de conversación.",
+    filmNote: "Narración en español; subtítulos en español e inglés. Recorrido de formularios antes del envío final, tarjetas con fotos y sus detalles, perfiles preparados y una conversación entre dos cuentas de demostración controladas.",
     productEyebrow: "02 / La experiencia",
     productTitleFirst: "De un perfil",
     productTitleSecond: "a una conversación.",
-    productIntro: "Un recorrido completo entre cuentas, perfiles, descubrimiento y mensajes. Cada interacción tiene un estado que la aplicación necesita conservar.",
+    productIntro: "Un recorrido desde los formularios de registro hasta los perfiles, el descubrimiento y los mensajes. La muestra del formulario termina antes del envío final.",
+    registrationTitle: "Recorrer los formularios de registro.",
+    registrationBody: "El correo y la contraseña inician el recorrido. Nombre, fecha de nacimiento, facultad, carrera, semestre y preferencias dan paso a una biografía y los intereses. Esta muestra termina antes del envío final.",
+    registrationDetail: "Formularios de registro · Datos académicos · Preferencias e intereses",
+    registrationAlt: "Formularios de registro con datos controlados de demostración, antes del envío final",
+    registrationCaption: "Recorrido del formulario antes del envío final.",
     profileTitle: "Que un perfil se sienta como una persona.",
     profileBody: "El registro con correo confirmado, varias fotos, una biografía y un catálogo de intereses permiten presentarse. El recorte de fotos ocurre en el navegador.",
     profileDetail: "Ciclo de cuentas · Perfiles · Preparación de imágenes con Canvas",
@@ -36,7 +41,12 @@
     discoveryBody: "El descubrimiento utiliza la preferencia de género y los perfiles confirmados. Las tarjetas admiten mouse y pantalla táctil; los likes y la reciprocidad acercan a las personas a una conversación.",
     discoveryDetail: "Descubrimiento por preferencia · Likes · Detección de reciprocidad",
     discoveryAlt: "Descubrimiento de perfiles e interacción de like con cuentas de demostración",
-    discoveryCaption: "Una primera interacción en el recorrido de descubrimiento.",
+    discoveryCaption: "Tarjetas con fotos en la interfaz original de descubrimiento.",
+    cardDetailTitle: "Ver más allá de la primera foto.",
+    cardDetailBody: "El control inferior de detalles permite leer la biografía, la carrera, el semestre y los intereses sin salir de la tarjeta. Las fotos cambian dentro de la misma tarjeta.",
+    cardDetailDetail: "Galería de fotos · Biografía desplegable · Intereses",
+    cardDetailAlt: "Tarjeta de demostración desplegada con su biografía, datos académicos e intereses",
+    cardDetailCaption: "El control inferior de la tarjeta revela la biografía y los intereses.",
     conversationTitle: "Conservar la conversación al volver.",
     conversationBody: "Los mensajes se guardan en MongoDB antes de que el cliente emita el registro guardado mediante Socket.IO. Al volver a una conversación, la API recupera su historial.",
     conversationDetail: "Mensajes persistentes · Eventos en tiempo real · Historial recuperado",
@@ -82,7 +92,7 @@
     githubProfile: "Perfil de GitHub",
     openApp: "Abrir la aplicación",
     appNote: "Se requiere una cuenta para explorar las funciones privadas.",
-    footerPrivacy: "El video y las capturas usan cuentas de demostración preparadas en un entorno aislado. La aplicación pública conserva sus cuentas reales. Este caso no incluye conversaciones privadas ni datos de cuentas.",
+    footerPrivacy: "El video y las capturas usan cuentas de demostración preparadas en un entorno aislado. Las fotos de los perfiles de demostración se generaron con IA. La aplicación pública conserva sus cuentas reales. Este caso no incluye conversaciones privadas ni datos de cuentas.",
     backToTop: "Volver al inicio ↑",
   };
 
@@ -92,8 +102,8 @@
   const attributeElements = attributeKinds.flatMap((attribute) => [...document.querySelectorAll(`[data-i18n-${attribute}]`)].map((element) => ({ element, attribute, key: element.getAttribute(`data-i18n-${attribute}`), english: element.getAttribute(attribute) })));
   const toggle = document.getElementById("language-toggle");
   const descriptions = {
-    en: "Inlooveu: a university social platform built and launched by Pierre Burciaga. Product, persistent messaging, and the engineering behind a real community.",
-    es: "Inlooveu: una plataforma social universitaria creada y lanzada por Pierre Burciaga. Producto, mensajería persistente e ingeniería para una comunidad real.",
+    en: "Inlooveu: a university social platform built and launched by Pierre Burciaga. A 120-second walkthrough of registration forms, profile discovery, and persistent messaging.",
+    es: "Inlooveu: una plataforma social universitaria creada y lanzada por Pierre Burciaga. Un recorrido de 120 segundos por los formularios de registro, el descubrimiento y los mensajes persistentes.",
   };
   let language = "en";
   function selectCaptions() {
