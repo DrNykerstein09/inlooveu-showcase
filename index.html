@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff5f6">
+  <meta name="description" content="Inlooveu: a university social platform built and launched by Pierre Burciaga. Product, persistent messaging, and the engineering behind a real community.">
+  <title>Inlooveu — Pierre Burciaga</title>
+  <link rel="canonical" href="https://drnykerstein09.github.io/inlooveu-showcase/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Inlooveu — Built & launched by Pierre Burciaga">
+  <meta property="og:description" content="A university social platform: product ownership, persistent real-time messaging, and full-stack engineering. Watch the 75-second walkthrough.">
+  <meta property="og:url" content="https://drnykerstein09.github.io/inlooveu-showcase/">
+  <meta property="og:image" content="https://drnykerstein09.github.io/inlooveu-showcase/assets/social-preview.png">
+  <meta property="og:image:alt" content="Inlooveu, built and launched by Pierre Burciaga, with 1,800 historical registered accounts">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.config.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="#main" aria-label="Inlooveu home" data-i18n-aria-label="homeLabel">INLOOVEU<span aria-hidden="true">✳</span></a>
+    <nav aria-label="Main navigation" data-i18n-aria-label="navigation">
+      <a href="#product" data-i18n="navProduct">The product</a>
+      <a href="#engineering" data-i18n="navEngineering">Engineering</a>
+      <button class="language-button" type="button" id="language-toggle" aria-label="Read this website in Spanish">Español <span aria-hidden="true">↗</span></button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-heading">
+        <p class="eyebrow" data-i18n="heroEyebrow">A university social platform · Product & engineering</p>
+        <h1 id="hero-title"><span data-i18n="heroTitleFirst">Built to connect</span><br><em data-i18n="heroTitleSecond">a real community.</em></h1>
+      </div>
+      <div class="hero-bottom">
+        <div class="hero-story">
+          <p class="lead" data-i18n="heroDescription">I designed, built, and launched Inlooveu: a place for university students to discover people, express their interests, and turn a first connection into a conversation.</p>
+          <p class="byline"><strong>Pierre Burciaga</strong><span data-i18n="heroRole">Founder & Full-Stack Developer</span></p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#walkthrough" id="watch-link" hidden><span data-i18n="watch">Watch the walkthrough</span><span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="#engineering"><span data-i18n="engineeringNotes">Engineering notes</span><span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="adoption">
+          <span class="metric-number">1,800</span>
+          <span class="metric-label" data-i18n="metricLabel">registered accounts</span>
+          <p data-i18n="metricDefinition">Historical MongoDB count recorded by the founder. This is a registration count, not an active-user metric.</p>
+          <a href="#evidence" class="small-link" data-i18n="evidenceLink">About this number ↓</a>
+        </div>
+      </div>
+      <div class="hero-baseline"><span>React / TypeScript / Express / MongoDB / Socket.IO</span><span data-i18n="heroBaseline">From an idea to a working, deployed product.</span></div>
+    </section>
+
+    <section class="walkthrough" id="walkthrough" aria-labelledby="walkthrough-title" hidden>
+      <div class="wrap">
+        <div class="section-topline"><p class="eyebrow light" data-i18n="filmEyebrow">01 / A product in motion</p><span data-i18n="filmDuration">75-second walkthrough</span></div>
+        <h2 id="walkthrough-title" data-i18n="filmTitle">A connection is only the beginning.</h2>
+        <div class="video-shell">
+          <video id="demo-video" controls playsinline preload="metadata" aria-label="Inlooveu product walkthrough" data-i18n-aria-label="videoLabel">
+            <source data-src="assets/inlooveu-demo.mp4" type="video/mp4">
+            <track data-caption-language="en" kind="captions" srclang="en" label="English" default>
+            <track data-caption-language="es" kind="captions" srclang="es" label="Español">
+            <p data-i18n="videoFallback">Your browser does not support embedded video.</p>
+          </video>
+        </div>
+        <p class="film-note" data-i18n="filmNote">Spanish narration, with English and Spanish captions. Prepared demonstration accounts show the product, message delivery, and conversation history.</p>
+      </div>
+    </section>
+
+    <section class="product wrap section-space" id="product" aria-labelledby="product-title">
+      <div class="section-heading">
+        <div><p class="eyebrow" data-i18n="productEyebrow">02 / The experience</p><h2 id="product-title"><span data-i18n="productTitleFirst">From a profile</span><br><em data-i18n="productTitleSecond">to a conversation.</em></h2></div>
+        <p data-i18n="productIntro">A complete journey across accounts, profiles, discovery, and messaging. Each interaction has a state that the application needs to preserve.</p>
+      </div>
+      <ol class="journey">
+        <li class="journey-step">
+          <div class="step-copy"><span class="step-number" aria-hidden="true">01</span><h3 data-i18n="profileTitle">Make a profile feel like a person.</h3><p data-i18n="profileBody">Email-confirmed registration, multiple photos, a biography, and a catalog of interests give people a way to introduce themselves. Photo cropping happens in the browser.</p><span class="detail-label" data-i18n="profileDetail">Account lifecycle · Profiles · Canvas image preparation</span></div>
+          <figure class="product-figure" data-asset="product" hidden><div class="image-mat"><img alt="Prepared demonstration profile showing a biography and interests" data-i18n-alt="profileAlt" loading="lazy" decoding="async"></div><figcaption><span>01 —</span><span data-i18n="profileCaption">A prepared profile, with interests and space for a personal introduction.</span></figcaption></figure>
+        </li>
+        <li class="journey-step">
+          <div class="step-copy"><span class="step-number" aria-hidden="true">02</span><h3 data-i18n="discoveryTitle">Give a first connection somewhere to go.</h3><p data-i18n="discoveryBody">Discovery uses gender preference and confirmed profiles. Cards support mouse and touch interactions; likes and reciprocity lead people toward a conversation.</p><span class="detail-label" data-i18n="discoveryDetail">Preference-based discovery · Likes · Reciprocity detection</span></div>
+          <figure class="product-figure" data-asset="discovery" hidden><div class="image-mat"><img alt="Profile discovery and like interaction using prepared demonstration accounts" data-i18n-alt="discoveryAlt" loading="lazy" decoding="async"></div><figcaption><span>02 —</span><span data-i18n="discoveryCaption">A first interaction in the discovery flow.</span></figcaption></figure>
+        </li>
+        <li class="journey-step">
+          <div class="step-copy"><span class="step-number" aria-hidden="true">03</span><h3 data-i18n="conversationTitle">Keep the conversation when people return.</h3><p data-i18n="conversationBody">Messages are saved in MongoDB before the client emits the saved record through Socket.IO. Returning to a conversation loads its history through the API.</p><span class="detail-label" data-i18n="conversationDetail">Persistent messages · Real-time events · Restored history</span></div>
+          <figure class="product-figure" data-asset="conversation" hidden><div class="image-mat"><img alt="A conversation between two controlled demonstration accounts" data-i18n-alt="conversationAlt" loading="lazy" decoding="async"></div><figcaption><span>03 —</span><span data-i18n="conversationCaption">Prepared messages between two accounts controlled for the demonstration.</span></figcaption></figure>
+        </li>
+      </ol>
+    </section>
+
+    <section class="engineering section-space" id="engineering" aria-labelledby="engineering-title">
+      <div class="wrap">
+        <div class="section-heading"><div><p class="eyebrow" data-i18n="engineeringEyebrow">03 / Engineering notes</p><h2 id="engineering-title" data-i18n="engineeringTitle">Save. Emit. Recover.</h2></div><p data-i18n="engineeringIntro">The central decision: a live event distributes a message; the database preserves the conversation. Those responsibilities stay distinct.</p></div>
+        <div class="architecture" role="img" aria-label="React sends a message to Express, which persists it in MongoDB. The saved message is emitted through Socket.IO. A later API request retrieves conversation history." data-i18n-aria-label="architectureAlt">
+          <div class="architecture-line"><div class="architecture-node"><span data-i18n="architectureClient">CLIENT</span><strong>React + TypeScript</strong></div><span class="flow-arrow" aria-hidden="true">→</span><div class="architecture-node"><span>API</span><strong>Express</strong></div><span class="flow-arrow" aria-hidden="true">→</span><div class="architecture-node"><span data-i18n="architectureDatabase">DATABASE</span><strong>MongoDB</strong></div></div>
+          <div class="architecture-events"><p><span class="event-dot" aria-hidden="true"></span><strong>Socket.IO</strong><span data-i18n="eventExplanation">distributes the saved message</span></p><p><span class="history-arrow" aria-hidden="true">↶</span><span data-i18n="historyExplanation">The API retrieves the history on return</span></p></div>
+        </div>
+        <div class="decisions">
+          <article><span class="decision-index">01 /</span><h3 data-i18n="decisionOneTitle">Persistence before notification</h3><p data-i18n="decisionOneBody">The client waits for the message POST to succeed before emitting its result. A separate history request restores the stored conversation. Delivery acknowledgments and retry deduplication would be separate reliability improvements.</p></article>
+          <article><span class="decision-index">02 /</span><h3 data-i18n="decisionTwoTitle">A connected account lifecycle</h3><p data-i18n="decisionTwoBody">Email verification, JWT sessions, bcrypt password hashing, and account recovery connect the onboarding experience to the private application. An institutional-domain badge is separate from email confirmation.</p></article>
+          <article><span class="decision-index">03 /</span><h3 data-i18n="decisionThreeTitle">Image preparation at the edge</h3><p data-i18n="decisionThreeBody">Canvas prepares cropped profile photos in the browser; external storage handles the resulting files. A windowed interest selector supports a large catalog without rendering every option at once.</p></article>
+        </div>
+        <figure class="engineering-figure" data-asset="engineering" hidden><img alt="Diagram of message storage, Socket.IO distribution, and conversation history recovery" data-i18n-alt="engineeringImageAlt" loading="lazy" decoding="async"><figcaption data-i18n="engineeringCaption">The engineering decision: save, emit, recover.</figcaption></figure>
+        <a class="text-link repository-link" href="#" hidden><span data-i18n="repositoryLink">View the engineering showcase on GitHub</span><span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="ownership wrap section-space" aria-labelledby="ownership-title">
+      <div class="section-heading"><div><p class="eyebrow" data-i18n="ownershipEyebrow">04 / Ownership over time</p><h2 id="ownership-title"><span data-i18n="ownershipTitleFirst">Build the product.</span><br><em data-i18n="ownershipTitleSecond">Keep it working.</em></h2></div><p data-i18n="ownershipIntro">My role covered product decisions, interface design, frontend, backend, and deployment. The original launch and the 2026 recovery are two distinct stages of that work.</p></div>
+      <div class="timeline">
+        <article><p class="timeline-period" data-i18n="originalPeriod">Original product</p><h3 data-i18n="originalTitle">Launched for a university community.</h3><p data-i18n="originalBody">React and TypeScript on the frontend; Express, Socket.IO, and MongoDB behind the account and conversation flows. The static frontend and API used Render, with a custom domain, S3 photos, and SMTP email.</p><p class="timeline-detail" data-i18n="originalRole">Product design · Full-stack development · Cloud deployment</p></article>
+        <article><p class="timeline-period" data-i18n="recoveryPeriod">Recovery / 2026</p><h3 data-i18n="recoveryTitle">Bring the existing application back.</h3><p data-i18n="recoveryBody">The recovery preserves the existing MongoDB accounts and messages. Docker, Caddy, and HTTPS run on an existing Hetzner server. New photos use the existing Cloudinary account; email uses SMTP with mandatory STARTTLS.</p><p class="timeline-detail" data-i18n="recoveryRole">Session and chat-membership controls · Private-field protection · Maintenance</p></article>
+      </div>
+      <p class="limitation"><span aria-hidden="true">↳</span><span data-i18n="photoLimitation">Historical S3 photos remain unavailable and their original references are preserved. New uploads use Cloudinary.</span></p>
+      <details class="evidence" id="evidence"><summary><span data-i18n="evidenceTitle">A note on the adoption evidence</span><span aria-hidden="true">+</span></summary><div class="evidence-body"><p data-i18n="evidenceMain">The founder recorded 1,800 registered accounts in a historical MongoDB count on another computer. That count is owner-reported and was not independently reproduced during the 2026 recovery.</p><p data-i18n="evidenceBackup">A separate preserved export contains 681 account records and 2,129 distinct, nonempty stored messages. It describes a different cut of the application’s history; those messages must not be presented as the same cohort or period as the 1,800-account count.</p><p data-i18n="evidenceLimits">The preserved export includes missing account and chat references. Registration records are not unique-person verification, and no MAU, DAU, or retention claim is made. Overlapping backups are not added together.</p></div></details>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title"><div class="wrap contact-inner"><div><p class="eyebrow light" data-i18n="contactEyebrow">Pierre Burciaga / Software engineer</p><h2 id="contact-title"><span data-i18n="contactTitleFirst">Let's build the next</span><br><em data-i18n="contactTitleSecond">useful thing.</em></h2></div><div class="contact-links"><a href="mailto:hola@veritia.mx">hola@veritia.mx <span aria-hidden="true">↗</span></a><a href="https://github.com/DrNykerstein09" target="_blank" rel="noopener noreferrer"><span data-i18n="githubProfile">GitHub profile</span><span aria-hidden="true">↗</span></a><a class="app-link" href="https://2.29.1.242" target="_blank" rel="noopener noreferrer"><span data-i18n="openApp">Open the application</span><span aria-hidden="true">↗</span></a><p data-i18n="appNote">An account is required to explore the private features.</p></div></div></section>
+  </main>
+  <footer class="site-footer wrap"><p>INLOOVEU · Pierre Burciaga</p><p data-i18n="footerPrivacy">Video and screenshots use demonstration accounts prepared in isolation. The live application preserves its real accounts. No private conversations or account data are part of this case study.</p><a href="#main" data-i18n="backToTop">Back to top ↑</a></footer>
+</body>
+</html>

@@ -1,0 +1,67 @@
+WEBVTT
+
+00:00:00.084 --> 00:00:02.449
+Inlooveu: a university social platform.
+
+00:00:02.719 --> 00:00:04.524
+Built and launched by Pierre Burciaga.
+
+00:00:05.238 --> 00:00:07.676
+1,800 historical registered accounts.
+
+00:00:09.099 --> 00:00:11.659
+Email-verified accounts.
+
+00:00:11.963 --> 00:00:13.807
+Profiles with interests and photos.
+
+00:00:14.014 --> 00:00:15.810
+Preference-based discovery.
+
+00:00:16.658 --> 00:00:19.413
+An experience built with React and TypeScript.
+
+00:00:22.099 --> 00:00:24.441
+Touch interactions connect profile cards
+
+00:00:24.453 --> 00:00:26.480
+to likes and mutual-like detection.
+
+00:00:27.328 --> 00:00:29.330
+This recording uses controlled demo accounts
+
+00:00:29.621 --> 00:00:31.624
+in an isolated copy of the application.
+
+00:00:34.099 --> 00:00:36.635
+The chat combines persistence and real-time
+updates.
+
+00:00:37.471 --> 00:00:40.553
+The API saves a message in MongoDB
+
+00:00:40.566 --> 00:00:43.090
+before Socket.IO notifies the other client.
+
+00:00:49.099 --> 00:00:50.300
+After a page reload,
+
+00:00:50.603 --> 00:00:52.582
+history is restored from the database.
+
+00:00:53.430 --> 00:00:57.459
+The messages remain when the client is
+reopened.
+
+00:01:01.084 --> 00:01:04.134
+React, Express, MongoDB and Socket.IO.
+
+00:01:04.859 --> 00:01:06.985
+Product, frontend, backend and deployment
+
+00:01:07.244 --> 00:01:08.676
+connected in one application.
+
+00:01:10.099 --> 00:01:12.562
+Explore the case study and engineering
+decisions.
